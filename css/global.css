@@ -1,0 +1,203 @@
+/* ==========================================================================
+   VARIABLES GLOBALES (Colores y Fuentes estilo Biblioteca Premium)
+   ========================================================================== */
+:root {
+    --color-principal: #1a2530;   /* Azul marino oscuro muy elegante */
+    --color-secundario: #c4860a;  /* Dorado clásico de libros antiguos */
+    --color-fondo: #f8f6f2;       /* Blanco hueso / crema suave para descansar la vista */
+    --color-blanco: #ffffff;
+    --color-texto: #333333;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transicion-suave: all 0.3s ease;
+}
+
+/* ==========================================================================
+   ESTILOS GENERALES
+   ========================================================================== */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-principal);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   ANIMACIONES (Efectos de entrada bien bacanos)
+   ========================================================================== */
+@keyframes aparecerDesdeAbajo {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes brillarDorado {
+    0% { box-shadow: 0 0 5px rgba(196, 134, 10, 0.2); }
+    50% { box-shadow: 0 0 15px rgba(196, 134, 10, 0.6); }
+    100% { box-shadow: 0 0 5px rgba(196, 134, 10, 0.2); }
+}
+
+/* ==========================================================================
+   CONTENEDORES Y TARJETAS (Efecto Hover y Sombra)
+   ========================================================================== */
+.contenedor-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.tarjeta-biblioteca {
+    background-color: var(--color-blanco);
+    border-top: 5px solid var(--color-secundario); /* Línea dorada arriba */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    width: 100%;
+    max-width: 420px;
+    animation: aparecerDesdeAbajo 0.6s ease-out; /* Corre al cargar la página */
+    transition: var(--transicion-suave);
+}
+
+.tarjeta-biblioteca:hover {
+    transform: translateY(-5px); /* Se eleva un poquito al pasar el mouse */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================================================
+   FORMULARIOS, INPUTS Y BOTONES
+   ========================================================================== */
+.titulo-biblioteca {
+    color: var(--color-principal);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.subtitulo-biblioteca {
+    color: var(--color-secundario);
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.grupo-campo {
+    margin-bottom: 20px;
+}
+
+.etiqueta-formulario {
+    display: block;
+    color: var(--color-principal);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input-biblioteca {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 15px;
+    color: var(--color-texto);
+    box-sizing: border-box;
+    transition: var(--transicion-suave);
+}
+
+/* Cuando el usuario hace clic para escribir */
+.input-biblioteca:focus {
+    border-color: var(--color-secundario);
+    outline: none;
+    background-color: #fffdf9; /* Fondo sutilmente cálido */
+    animation: brillarDorado 2s infinite;
+}
+
+.btn-biblioteca {
+    width: 100%;
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transicion-suave);
+    box-shadow: 0 4px 6px rgba(26, 37, 48, 0.2);
+}
+
+/* Efecto al pasar el mouse por el botón */
+.btn-biblioteca:hover {
+    background-color: var(--color-secundario);
+    box-shadow: 0 6px 12px rgba(196, 134, 10, 0.3);
+    transform: scale(1.02); /* Se agranda un 2% de forma fluida */
+}
+
+.btn-biblioteca:active {
+    transform: scale(0.98); /* Efecto de hundido al darle clic */
+}
+
+/* ==========================================================================
+   PANEL PRINCIPAL / NAVBAR (Para tu archivo principal.html)
+   ========================================================================== */
+.barra-navegacion {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-nav {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-blanco);
+    text-decoration: none;
+}
+
+.logo-nav span {
+    color: var(--color-secundario);
+}
+
+.btn-salir {
+    background-color: transparent;
+    color: var(--color-blanco);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: var(--transicion-suave);
+}
+
+.btn-salir:hover {
+    background-color: #e74c3c; /* Rojo suave solo para el botón de cerrar sesión */
+    border-color: #e74c3c;
+}
+
+.contenido-principal {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    animation: aparecerDesdeAbajo 0.8s ease-out;
+}
+
+.bienvenida-box {
+    background-color: var(--color-blanco);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-left: 5

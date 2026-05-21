@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiblioCECAR - Login</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+    <div class="contenedor-login">
+        <div class="tarjeta-login">
+            <h1 class="titulo-app">BiblioCECAR</h1>
+            <p class="subtitulo-app">Sistema de Biblioteca</p>
+            
+            <form id="loginForm">
+                <div class="campo-grupo">
+                    <label class="etiqueta-campo">Usuario o Correo</label>
+                    <input type="text" class="input-login" id="usuario" placeholder="ejemplo@cecar.edu.co" required>
+                </div>
+                
+                <div class="campo-grupo">
+                    <label class="etiqueta-campo">Contraseña</label>
+                    <input type="password" class="input-login" id="password" placeholder="••••••••" required>
+                </div>
+                
+                <button type="button" id="btnEntrar" class="btn-ingresar">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/authservice.js"></script>
+</body>
+</html>

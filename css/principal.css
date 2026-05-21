@@ -1,0 +1,133 @@
+
+body {
+    background-color: #F4EFE6;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.pantalla-completa {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.barra-lateral {
+    width: 250px;
+    background-color: #1B2A41;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.marca {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.marca h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.marca span {
+    color: #C4860A;
+}
+
+.menu-navegacion {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    flex-grow: 1;
+}
+
+.enlace-menu {
+    color: #a0aec0;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.enlace-menu:hover, .enlace-menu.activo {
+    background-color: rgba(196, 134, 10, 0.2);
+    color: #C4860A;
+    border-left: 4px solid #C4860A;
+}
+
+.zona-salir {
+    padding: 20px;
+}
+
+.btn-cerrar-sesion {
+    width: 100%;
+    background-color: #e53e3e;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contenido-derecha {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.barra-superior {
+    background-color: white;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.titulo-seccion {
+    margin: 0;
+    color: #1B2A41;
+    font-weight: bold;
+}
+
+.usuario-perfil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.letra-avatar {
+    width: 35px;
+    height: 35px;
+    background-color: #C4860A;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.tarjeta-blanca {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    border: 1px solid #EEE8DC;
+}
+
+.tarjeta-etiqueta {
+    margin: 0;
+    color: #718096;
+    font-size: 14px;
+}
+
+.tarjeta-numero {
+    margin: 5px 0 0 0;
+    color: #1B2A41;
+    font-size: 28px;
+    font-weight: bold;
+}
